@@ -13,7 +13,6 @@ namespace eCardSender.Misc
     {
 
         MailAddress fromAddress = new MailAddress("floribuda85@gmail.com", "Florin Buda");
-        const string fromPassword = "13kb16696";
         const string subject = "My picture!";
         private static Mailer instance=null;
 
@@ -89,7 +88,7 @@ namespace eCardSender.Misc
         private string getPassword()
         {
             string passwordEncrypted = "b7e93f19579867f744577a49f0073f82";
-            string encryptionKey = Microsoft.VisualBasic.Interaction.InputBox("Type the decryption password.", "Password", "", -1, -1);
+            string encryptionKey = Microsoft.VisualBasic.Interaction.InputBox("Type the decryption key.", "Password", "", -1, -1);
 
             BlowFishCS.BlowFish decryptor = new BlowFishCS.BlowFish(encryptionKey);
 
